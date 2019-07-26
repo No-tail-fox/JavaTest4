@@ -1,5 +1,0 @@
-# 项目名为JavaTest4 子模块为Exam1
-## build.sh用于编译maven项目和构建镜像
-## start.sh用于启动docker-compose荣i去
-## curl.sh 用于向java容器发起请求
-## stop.sh 用于停止socker-compose
