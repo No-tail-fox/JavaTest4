@@ -21,7 +21,6 @@
         select film.title as film_title,film.film_id as filmId
         from film
         order by film_id ${sort}
-        limit #{page},#{pageSize}
     </select>
 
     <select id="login" parameterType="Customer" resultType="int">
