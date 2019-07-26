@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Exam1.dao.MusicDao">
+
+    <delete id="deleteById" parameterType="int" >
+        DELETE from customer where customer_id=#{customer_id}
+    </delete>
+
+    <select id="findByAddress" parameterType="String" resultType="int">
+        select address_id
+        from address
+        where address=#{address}
+    </select>
+
+    <insert id="insertCustomer" parameterType="Customer" useGeneratedKeys="true" keyProperty="customerId">
+        INSERT into customer(first_name,last_name,email,address_id,store_id) values (#{firstName},#{lastName},#{email},#{addressId},1)
+    </insert>
+
+
+    <select id="findByPage" parameterType="Page" resultType="Film">
+        select film.title as film_title,film.film_id as filmId
+        from film
+        order by film_id ${sort}
+        limit #{page},#{pageSize}
+    </select>
+
+    <select id="login" parameterType="Customer" resultType="int">
+        select customer_id
+        from customer
+        where first_name=#{firstName} and last_name=#{lastName}
+    </select>
+    <update id="updateById" parameterType="Customer" >
+        update customer
+        <set>
+            <if test="firstName!=null">
+                customer.first_name=#{firstName},
+            </if>
+            <if test="lastName!=null">
+                customer.last_name=#{lastName},
+            </if>
+            <if test="email!=null">
+                customer.email=#{email}
+            </if>
+        </set>
+        where customer_id=#{customerId}
+    </update>
+
+
+
+
+    <select id="findByTitle" parameterType="String" resultType="Film">
+        select film.title as film_title,film.film_id as filmId
+        from film
+        <where>
+        <if test="filmId!=null and filmId==10">
+              film.film_id=#{filmId}
+        </if>
+        </where>
+    </select>
+    
+</mapper>
