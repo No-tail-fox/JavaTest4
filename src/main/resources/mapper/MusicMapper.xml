@@ -13,7 +13,7 @@
     </select>
 
     <insert id="insertCustomer" parameterType="Customer" useGeneratedKeys="true" keyProperty="customerId">
-        INSERT into customer(first_name,last_name,email,address_id,store_id) values (#{firstName},#{lastName},#{email},#{addressId},1)
+        INSERT into customer(first_name,last_name,email,address_id,store_id,create_date) values (#{firstName},#{lastName},#{email},#{addressId},1,"2019-02-14 22:04:36")
     </insert>
 
 
