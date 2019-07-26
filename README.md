@@ -1,10 +1,14 @@
-# ÏîÄ¿ÃûÎªJavaTest4 ×ÓÄ£¿éÎªExam1
-## build.shÓÃÓÚ±àÒëmavenÏîÄ¿ºÍ¹¹½¨¾µÏñ
-## start.shÓÃÓÚÆô¶¯docker-composeÈÙiÈ¥
-## curl.sh ÓÃÓÚÏòjavaÈİÆ÷·¢ÆğÇëÇó
-## stop.sh ÓÃÓÚÍ£Ö¹socker-compose
-### µÇÂ½ curl -v http://localhost:18080/login?password=SMITH\&name=MARY 
-### ²éÑ¯ curl -v http://localhost:18080/listall?page=1
-### ²åÈë result=`curl -X POST -d "first_name=test\&last_name=123\&email=873062356\&address=47 MySakila Drive" http://localhost:18080/insert`
-### ¸üĞÂ curl -X PUT http://localhost:18080/updatebyid?first_name=test\&last_name=456\&email=873062356\&customerid=${result}\&address=47 MySakila Drive
-### É¾³ı curl -X DELETE  http://localhost:18080/deletebyid?customerid=${result}
+# æ³¨æ„è¿™é‡Œï¼Œdevæ˜¯ç¬¬ä¸€æ¬¡æäº¤çš„æ—¶å€™çš„ä»£ç 
+# masterï¼Œæ˜¯ç¬¬äºŒæ¬¡æäº¤ä¿®æ”¹åçš„ä»£ç 
+# thirdï¼Œæ˜¯ç¬¬ä¸‰æ¬¡æäº¤ä¿®æ”¹åçš„ä»£ç 
+
+# é¡¹ç›®åä¸ºJavaTest4 å­æ¨¡å—ä¸ºExam1
+## build.shç”¨äºç¼–è¯‘mavené¡¹ç›®å’Œæ„å»ºé•œåƒ
+## start.shç”¨äºå¯åŠ¨docker-composeè£iå»
+## curl.sh ç”¨äºå‘javaå®¹å™¨å‘èµ·è¯·æ±‚
+## stop.sh ç”¨äºåœæ­¢socker-compose
+### ç™»é™† curl -v http://localhost:18080/login?password=SMITH\&name=MARY 
+### æŸ¥è¯¢ curl -v http://localhost:18080/listall?page=1
+### æ’å…¥ result=`curl -X POST -d "first_name=test\&last_name=123\&email=873062356\&address=47 MySakila Drive" http://localhost:18080/insert`
+### æ›´æ–° curl -X PUT http://localhost:18080/updatebyid?first_name=test\&last_name=456\&email=873062356\&customerid=${result}\&address=47 MySakila Drive
+### åˆ é™¤ curl -X DELETE  http://localhost:18080/deletebyid?customerid=${result}
