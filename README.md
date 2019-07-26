@@ -7,6 +7,7 @@
 # dev分支的代码是最早提交的，其次才是master分支<br><br><br><br>
 ## build.sh用于编译maven项目和构建镜像
 ## start.sh用于启动docker-compose容器
+## 启动容器后需要等待直到mysql加载完成后
 ## curl.sh 用于向java容器发起请求
 ## stop.sh 用于停止socker-compose，并且打开日志
 ### 登陆 curl -v http://localhost:18080/login?password=SMITH\&name=MARY 
