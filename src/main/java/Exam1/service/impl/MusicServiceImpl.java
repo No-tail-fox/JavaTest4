@@ -43,6 +43,7 @@ public class MusicServiceImpl implements MusicService {
 
     @Override
     public ArrayList<Film> findByPage(Page page) {
+        PageHelper.startPage(page.getPage(),page.getPageSize());
         int pa=(page.getPage()-1)*page.getPageSize();
         page.setPage(pa);
         ArrayList<Film> list=musicDao.findByPage(page);
