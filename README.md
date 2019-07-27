@@ -6,6 +6,7 @@
 # third，是第三次提交修改后的代码，也是最终代码分支，添加了Pagehelper
 # dev分支的代码是最早提交的，其次才是master分支<br><br><br><br>
 ## build.sh用于编译maven项目和构建镜像
+## 构建完项目，要把项目放在docker目录的java文件夹下
 ## start.sh用于启动docker-compose容器
 ## 启动容器后需要等待直到mysql加载完成后
 ## curl.sh 用于向java容器发起请求
