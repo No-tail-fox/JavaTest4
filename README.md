@@ -5,6 +5,7 @@
 # master，是第二次提交修改后的代码，完善了代码，添加了参数解析器
 # third，是第三次提交修改后的代码，也是最终代码分支，添加了Pagehelper
 # dev分支的代码是最早提交的，其次才是master分支<br><br><br><br>
+## 因为github提交的速度过慢，所以我删剪了一些无关代码，会导致build的时候找不到文件，所以需要先用idea软件打开运行一次
 ## 在最早的dev分支下，因为build.sh加载后，没有把jar文件放到指定位置就进行了镜像构建，会导致找不到jar包，所以dev分支下，也就是上午提交的代码中，需要## 手动进行```mvn clean package```把jar包放到docker/java文件下，然后```docker-compose build docker-compose up```来生成镜像和容器
 ## 同时还需要下载sql文件放到docker/mysql文件夹下，这两个文件因为太大没有直接上传
 ## 第一次提交的代码是可以在本地完整运行的
