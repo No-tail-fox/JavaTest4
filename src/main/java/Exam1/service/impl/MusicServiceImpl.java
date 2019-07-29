@@ -2,6 +2,7 @@ package Exam1.service.impl;
 
 import Exam1.dao.MusicDao;
 import Exam1.domain.*;
+import com.github.pagehelper.PageHelper;
 import Exam1.service.MusicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
