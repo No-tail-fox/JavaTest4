@@ -7,6 +7,7 @@
 # dev分支的代码是最早提交的，其次才是master分支<br><br><br><br>
 ## 在最早的dev分支下，因为build.sh加载后，没有把jar文件放到指定位置就进行了镜像构建，会导致找不到jar包，所以dev分支下，也就是上午提交的代码中，需要## 手动进行```mvn clean package```把jar包放到docker/java文件下，然后```docker-compose build docker-compose up```来生成镜像和容器
 ## 在第一次提交之后的提交，都针对这个问题进行了处理。第一次提交的代码在可以完整运行的
+## 在第一次提交的代码中，docker/java/set.sh脚本文件，可能会因为不是unix编码而出现在linux环境下无法运行脚本的bug，在后续提交的代码中将set.sh脚本文## 件统一修改成了unix格式
 ## build.sh用于编译maven项目和构建镜像
 ## 构建完项目，要把项目放在docker目录的java文件夹下
 ## start.sh用于启动docker-compose容器
